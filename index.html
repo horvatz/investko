@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Investko</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <h3>Investko</h3>
+        <a href="viri.html">Viri</a>
+      </nav>
+      <div class="container">
+        <div class="popular-cards"></div>
+        <div class="main">
+          <div class="prices">
+            <div class="section-header">
+              <h6>VSE KRIPTOVALUTE</h6>
+              <h4>Cene kriptovalut danes</h4>
+              <div class="section-right">
+                <i id="btn-refresh" class="fas fa-sync"></i>
+                <h6 class="updated-at">Posodobljeno:</h6>
+                <h4 id="prices-loading">Nalagam podatke...</h4>
+              </div>
+            </div>
+            <table id="prices-table">
+              <tr>
+                <th>#</th>
+                <th>Valuta</th>
+                <th>Simbol</th>
+                <th>Cena</th>
+                <th>Sprememba v 24h</th>
+              </tr>
+              <tbody id="prices-table-body"></tbody>
+            </table>
+          </div>
+          <div id="user-crypto">
+            <div class="card-item">
+              <div class="section-header">
+                <h6>NALOŽBE</h6>
+                <h4>Moje kriptovalute</h4>
+              </div>
+              <table id="user-table">
+                <tr>
+                  <th>Valuta</th>
+                  <th>Simbol</th>
+                  <th>Vrednost</th>
+                  <th>Vrednost USD</th>
+                  <th></th>
+                </tr>
+                <tbody id="user-table-body"></tbody>
+              </table>
+            </div>
+            <div class="add-crypto card-item">
+              <div class="section-header">
+                <h6>NALOŽBE</h6>
+                <h4>Dodaj kriptovalute</h4>
+              </div>
+              <div id="add-crypto-main">
+                <form id="add-form">
+                  <label for="crypto">Kriptovaluta:</label>
+                  <select id="crypto" name="crypto" required>
+                    <option value="" selected="selected">
+                      Izberi kriptovaluto
+                    </option>
+                  </select>
+                  <label for="value">Vrednost:</label>
+                  <input type="text" id="value" name="value" required />
+                  <button type="submit" id="btn-add" class="btn">
+                    Dodaj kriptovaluto
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        
+      </footer>
+    </div>
+    <div id="modal">
+      <div id="modal-content">
+        <div class="modal-header">
+          <h1>Nalagam...</h1>
+          <i id="modal-close" class="fas fa-times modal-close"></i>
+        </div>
+        <div id="modal-body">
+          <table id="info-table">
+            <tbody id="info-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="modal-edit">
+      <div id="modal-content-edit">
+        <div class="modal-header">
+          <h1>Nalagam...</h1>
+          <i id="modal-edit-close" class="fas fa-times modal-close"></i>
+        </div>
+        <div id="modal-body-edit">
+          <label for="value">Vrednost:</label>
+          <input type="text" name="edit-value" id="edit-value" />
+          <button id="btn-modal-edit" class="btn">Uredi</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
